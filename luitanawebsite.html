@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="LuiTanA Group — Agence Digitale Africaine. Scannez l'avenir.">
+
+    <title>LuiTanA Group — Scannez l'avenir.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+          rel="stylesheet">
+
+<style>
+
+/*======================================================
+RESET
+======================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#F5F0E8;
+
+    color:#0D2137;
+
+    font-family:'Space Grotesk',sans-serif;
+
+    overflow-x:hidden;
+
+    -webkit-font-smoothing:antialiased;
+
+}
+
+/*======================================================
+VARIABLES
+======================================================*/
+
+:root{
+
+    --navy:#0D2137;
+
+    --gold:#C49A2A;
+
+    --gold-light:#ECB634;
+
+    --white:#F5F0E8;
+
+    --muted:#687A89;
+
+    --border:rgba(196,154,42,.15);
+
+}
+
+/*======================================================
+NAVBAR
+======================================================*/
+
+nav{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:72px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 6%;
+
+    background:rgba(245,240,232,.93);
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid var(--border);
+
+    z-index:999;
+
+}
+
+.nav-brand{
+
+    font-family:'Space Mono',monospace;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    color:var(--navy);
+
+}
+
+.nav-brand span{
+
+    color:var(--gold);
+
+}
+
+.nav-cta{
+
+    padding:13px 28px;
+
+    border-radius:7px;
+
+    background:var(--navy);
+
+    color:var(--gold-light);
+
+    text-decoration:none;
+
+    font-family:'Space Mono';
+
+    font-size:.75rem;
+
+    letter-spacing:.12em;
+
+    transition:.35s;
+
+}
+
+.nav-cta:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/*======================================================
+HERO
+======================================================*/
+
+#hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding-top:90px;
+
+    padding-left:6%;
+
+    padding-right:6%;
+
+}
+
+.hero-content{
+
+    width:100%;
+
+    max-width:950px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+/*======================================================
+LOGO
+======================================================*/
+
+.hero-logo{
+
+    width:min(520px,82vw);
+
+    display:block;
+
+    margin-bottom:34px;
+
+    transition:.45s;
+
+}
+
+.hero-logo img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+.hero-logo:hover{
+
+    transform:translateY(-8px) scale(1.02);
+
+    filter:drop-shadow(0 20px 35px rgba(13,33,55,.18));
+
+}
+
+/*======================================================
+TAG
+======================================================*/
+
+.hero-tag{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:8px 22px;
+
+    border:1px solid var(--gold);
+
+    border-radius:100px;
+
+    color:var(--gold);
+
+    font-family:'Space Mono';
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    font-size:.74rem;
+
+    margin-bottom:38px;
+
+}
+
+.hero-tag::before{
+
+    content:"";
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+}
+
+/*======================================================
+TITLE
+======================================================*/
+
+h1{
+
+    font-size:clamp(3rem,6vw,5.4rem);
+
+    line-height:1.05;
+
+    letter-spacing:-.05em;
+
+    margin-bottom:28px;
+
+}
+
+/*======================================================
+DESCRIPTION
+======================================================*/
+
+.hero-sub{
+
+    max-width:700px;
+
+    color:var(--muted);
+
+    font-size:1.25rem;
+
+    line-height:1.7;
+
+    margin-bottom:45px;
+
+}
+
+/*======================================================
+BUTTON
+======================================================*/
+
+.btn-navy{
+
+    display:inline-block;
+
+    background:var(--navy);
+
+    color:var(--gold-light);
+
+    padding:18px 38px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-family:'Space Mono';
+
+    font-size:.82rem;
+
+    letter-spacing:.12em;
+
+    transition:.35s;
+
+}
+
+.btn-navy:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/*======================================================
+MARQUEE
+======================================================*/
+
+.marquee{
+
+    background:var(--navy);
+
+    overflow:hidden;
+
+    padding:14px 0;
+
+}
+
+.marquee-inner{
+
+    display:flex;
+
+    width:max-content;
+
+    animation:scroll 22s linear infinite;
+
+}
+
+.marquee span{
+
+    color:var(--gold-light);
+
+    font-family:'Space Mono';
+
+    letter-spacing:.18em;
+
+    font-size:.72rem;
+
+    white-space:nowrap;
+
+    padding:0 26px;
+
+}
+
+@keyframes scroll{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-50%);
+
+    }
+
+}
+
+/*======================================================
+PLACEHOLDERS
+======================================================*/
+
+.placeholder{
+
+    margin:70px auto;
+
+    width:min(1100px,92%);
+
+    padding:85px 40px;
+
+    border:2px dashed rgba(13,33,55,.12);
+
+    border-radius:14px;
+
+    text-align:center;
+
+    font-family:'Space Mono';
+
+    color:#6A7E8E;
+
+    letter-spacing:.08em;
+
+}
+
+.placeholder.dark{
+
+    background:#0D2137;
+
+    color:rgba(255,255,255,.45);
+
+    border-color:rgba(196,154,42,.2);
+
+}
+
+/*======================================================
+FOOTER
+======================================================*/
+
+footer{
+
+    margin-top:80px;
+
+    padding:35px 6%;
+
+    background:#091726;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.footer-brand{
+
+    color:white;
+
+    font-family:'Space Mono';
+
+}
+
+.footer-brand span{
+
+    color:var(--gold);
+
+}
+
+.footer-copy{
+
+    color:rgba(255,255,255,.35);
+
+    font-family:'Space Mono';
+
+    font-size:.72rem;
+
+}
+
+/*======================================================
+RESPONSIVE
+======================================================*/
+
+@media(max-width:900px){
+
+nav{
+
+padding:0 25px;
+
+}
+
+.hero-logo{
+
+width:88vw;
+
+}
+
+h1{
+
+font-size:2.9rem;
+
+}
+
+.hero-sub{
+
+font-size:1rem;
+
+}
+
+footer{
+
+flex-direction:column;
+
+gap:18px;
+
+text-align:center;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+<!-- ===========================
+     NAVBAR
+============================ -->
+
+<nav>
+
+    <div class="nav-brand">
+
+        Lui<span>Tan</span>A Group
+
+    </div>
+
+    <a href="#cta" class="nav-cta">
+
+        DÉMARRER UN PROJET
+
+    </a>
+
+</nav>
+
+<!-- ===========================
+     HERO
+============================ -->
+
+<section id="hero">
+
+    <div class="hero-content">
+
+        <a
+            href="/"
+            class="hero-logo"
+            title="Retour à l'accueil">
+
+            <img
+                src="logo.png"
+                alt="Logo LuiTanA Group">
+
+        </a>
+
+        <div class="hero-tag">
+
+            Agence Digitale • Yaoundé, Cameroun
+
+        </div>
+
+        <h1>
+
+            On ne fait pas des sites.<br>
+
+            On code des impacts.
+
+        </h1>
+
+        <p class="hero-sub">
+
+            LuiTanA Group transforme vos ambitions
+            en présence digitale mémorable.
+
+            <br><br>
+
+            Sites web • Applications mobiles • Branding •
+            Marketing Digital • Audit & Comptabilité.
+
+        </p>
+
+        <a
+            href="#services"
+            class="btn-navy">
+
+            SCANNEZ L'AVENIR →
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+     MARQUEE
+============================ -->
+
+<section class="marquee">
+
+    <div class="marquee-inner">
+
+        <span>Sites Web</span>
+
+        <span>✦</span>
+
+        <span>Applications Mobiles</span>
+
+        <span>✦</span>
+
+        <span>Branding</span>
+
+        <span>✦</span>
+
+        <span>Marketing Digital</span>
+
+        <span>✦</span>
+
+        <span>Audit & Comptabilité</span>
+
+        <span>✦</span>
+
+        <span>Conseil Stratégique</span>
+
+        <span>✦</span>
+
+        <span>Sites Web</span>
+
+        <span>✦</span>
+
+        <span>Applications Mobiles</span>
+
+        <span>✦</span>
+
+        <span>Branding</span>
+
+        <span>✦</span>
+
+        <span>Marketing Digital</span>
+
+        <span>✦</span>
+
+        <span>Audit & Comptabilité</span>
+
+        <span>✦</span>
+
+        <span>Conseil Stratégique</span>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+     SERVICES
+============================ -->
+
+<section
+    id="services"
+    class="placeholder">
+
+    [ STEP 4 — SERVICES ]
+
+</section>
+
+<!-- ===========================
+     MANIFESTO
+============================ -->
+
+<section
+    id="manifesto"
+    class="placeholder dark">
+
+    [ STEP 5 — MANIFESTO ]
+
+</section>
+
+<!-- ===========================
+     PROCESS
+============================ -->
+
+<section
+    id="process"
+    class="placeholder">
+
+    [ STEP 6 — PROCESS & TÉMOIGNAGES ]
+
+</section>
+
+<!-- ===========================
+     CTA
+============================ -->
+
+<section
+    id="cta"
+    class="placeholder dark">
+
+    [ STEP 7 — FORMULAIRE DE CONTACT ]
+
+</section>
+
+<!-- ===========================
+     FOOTER
+============================ -->
+
+<footer>
+
+    <div class="footer-brand">
+
+        Lui<span>Tan</span>A Group
+
+    </div>
+
+    <div class="footer-copy">
+
+        © 2026 LuiTanA Group · Yaoundé, Cameroun
+
+    </div>
+
+</footer>
+
+<!-- ===========================
+     JAVASCRIPT
+============================ -->
+
+<script>
+
+const logo = document.querySelector(".hero-logo");
+
+logo.addEventListener("mousemove",()=>{
+
+    logo.style.transform="translateY(-8px) scale(1.03) rotate(-2deg)";
+
+});
+
+logo.addEventListener("mouseleave",()=>{
+
+    logo.style.transform="translateY(0) scale(1) rotate(0deg)";
+
+});
+
+document.querySelector(".btn-navy").addEventListener("mouseenter",function(){
+
+    this.innerHTML="SCANNONS L'AVENIR →";
+
+});
+
+document.querySelector(".btn-navy").addEventListener("mouseleave",function(){
+
+    this.innerHTML="SCANNEZ L'AVENIR →";
+
+});
+
+</script>
+
+</body>
+
+</html>
