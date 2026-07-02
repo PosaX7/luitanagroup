@@ -70,6 +70,12 @@ VARIABLES
 
     --border:rgba(196,154,42,.15);
 
+    --blue:#0F5C8C;
+
+    --blue-deep:#0A3D5C;
+
+    --blue-light:#3B8FC4;
+
 }
 
 /*======================================================
@@ -302,6 +308,42 @@ DESCRIPTION
 
 }
 
+.hero-quote{
+
+    max-width:600px;
+
+    font-style:italic;
+
+    font-size:1rem;
+
+    line-height:1.6;
+
+    color:var(--gold);
+
+    opacity:.85;
+
+}
+
+.hero-quote .quote-author{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-family:'Space Mono';
+
+    font-style:normal;
+
+    letter-spacing:.1em;
+
+    text-transform:uppercase;
+
+    font-size:.7rem;
+
+    color:var(--muted);
+
+}
+
 /*======================================================
 BUTTON
 ======================================================*/
@@ -393,6 +435,734 @@ MARQUEE
 }
 
 /*======================================================
+MANIFESTO
+======================================================*/
+
+#manifesto{
+
+    padding:110px 6% 120px;
+
+    text-align:left;
+
+    background:#0D2137;
+
+    color:rgba(245,240,232,.92);
+
+    border:none;
+
+    letter-spacing:normal;
+
+    font-family:'Space Grotesk',sans-serif;
+
+}
+
+.manifesto-inner{
+
+    max-width:880px;
+
+    margin:0 auto;
+
+}
+
+.manifesto-kicker{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:var(--gold-light);
+
+    font-family:'Space Mono';
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    font-size:.74rem;
+
+    margin-bottom:32px;
+
+}
+
+.manifesto-kicker::before{
+
+    content:"";
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--gold-light);
+
+}
+
+.manifesto-lead p{
+
+    font-size:1.5rem;
+
+    line-height:1.55;
+
+    letter-spacing:-.02em;
+
+    margin-bottom:14px;
+
+    color:rgba(245,240,232,.96);
+
+}
+
+.manifesto-lead p.dim{
+
+    color:rgba(245,240,232,.55);
+
+}
+
+.manifesto-body{
+
+    margin-top:38px;
+
+    max-width:680px;
+
+}
+
+.manifesto-body p{
+
+    font-size:1.08rem;
+
+    line-height:1.8;
+
+    color:rgba(245,240,232,.7);
+
+    margin-bottom:22px;
+
+}
+
+.manifesto-grid{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:28px;
+
+}
+
+.manifesto-item{
+
+    padding:28px;
+
+    border:1px solid rgba(196,154,42,.22);
+
+    border-radius:12px;
+
+    background:rgba(245,240,232,.03);
+
+    transition:.35s;
+
+}
+
+.manifesto-item:hover{
+
+    border-color:var(--gold);
+
+    background:rgba(196,154,42,.06);
+
+    transform:translateY(-3px);
+
+}
+
+.manifesto-item .icon{
+
+    font-size:1.6rem;
+
+    display:block;
+
+    margin-bottom:14px;
+
+}
+
+.manifesto-item h3{
+
+    font-size:1.02rem;
+
+    font-weight:600;
+
+    color:var(--gold-light);
+
+    margin-bottom:10px;
+
+    letter-spacing:-.01em;
+
+}
+
+.manifesto-item p{
+
+    font-size:.94rem;
+
+    line-height:1.65;
+
+    color:rgba(245,240,232,.6);
+
+}
+
+.manifesto-item.full{
+
+    grid-column:1 / -1;
+
+}
+
+.manifesto-closing{
+
+    margin-top:70px;
+
+    padding-top:48px;
+
+    border-top:1px solid rgba(196,154,42,.2);
+
+}
+
+.manifesto-closing h3{
+
+    font-family:'Space Grotesk',sans-serif;
+
+    font-size:clamp(2rem,4vw,3rem);
+
+    letter-spacing:-.03em;
+
+    color:var(--white);
+
+    margin-bottom:18px;
+
+}
+
+.manifesto-closing h3 span{
+
+    color:var(--gold-light);
+
+}
+
+.manifesto-closing p{
+
+    max-width:560px;
+
+    font-size:1.08rem;
+
+    line-height:1.75;
+
+    color:rgba(245,240,232,.6);
+
+}
+
+@media(max-width:900px){
+
+.manifesto-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.manifesto-lead p{
+
+font-size:1.2rem;
+
+}
+
+}
+
+/*======================================================
+PREUVE SOCIALE
+======================================================*/
+
+#proof{
+
+    padding:100px 6% 110px;
+
+    background:var(--white);
+
+}
+
+.proof-inner{
+
+    max-width:1100px;
+
+    margin:0 auto;
+
+}
+
+.proof-kicker{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:var(--blue);
+
+    font-family:'Space Mono';
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    font-size:.74rem;
+
+    margin-bottom:20px;
+
+}
+
+.proof-kicker::before{
+
+    content:"";
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--blue);
+
+}
+
+.proof-heading{
+
+    max-width:640px;
+
+    font-size:clamp(1.7rem,3vw,2.4rem);
+
+    line-height:1.3;
+
+    letter-spacing:-.02em;
+
+    color:var(--navy);
+
+    margin-bottom:60px;
+
+}
+
+.proof-heading span{
+
+    color:var(--blue);
+
+}
+
+.proof-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.proof-item{
+
+    padding:32px 26px;
+
+    border-radius:14px;
+
+    background:rgba(15,92,140,.045);
+
+    border:1px solid rgba(15,92,140,.14);
+
+    transition:.35s;
+
+}
+
+.proof-item:hover{
+
+    border-color:var(--blue-light);
+
+    background:rgba(15,92,140,.08);
+
+    transform:translateY(-4px);
+
+}
+
+.proof-stat{
+
+    font-family:'Space Grotesk',sans-serif;
+
+    font-weight:700;
+
+    font-size:2.6rem;
+
+    letter-spacing:-.03em;
+
+    background:linear-gradient(120deg,var(--blue-deep),var(--blue-light));
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+
+    margin-bottom:14px;
+
+    line-height:1;
+
+}
+
+.proof-icon{
+
+    font-size:1.7rem;
+
+    display:block;
+
+    margin-bottom:16px;
+
+}
+
+.proof-item p{
+
+    font-size:.96rem;
+
+    line-height:1.65;
+
+    color:var(--muted);
+
+}
+
+.proof-item p strong{
+
+    color:var(--navy);
+
+    font-weight:600;
+
+}
+
+.apk-download{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-top:16px;
+
+    padding:10px 16px;
+
+    border-radius:8px;
+
+    background:linear-gradient(120deg,var(--blue-deep),var(--blue-light));
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-family:'Space Mono';
+
+    font-size:.72rem;
+
+    letter-spacing:.08em;
+
+    transition:.3s;
+
+}
+
+.apk-download:hover{
+
+    transform:translateY(-2px);
+
+    filter:brightness(1.08);
+
+}
+
+.apk-note{
+
+    margin-top:36px;
+
+    font-family:'Space Mono';
+
+    font-size:.76rem;
+
+    letter-spacing:.03em;
+
+    color:var(--muted);
+
+    max-width:560px;
+
+}
+
+@media(max-width:900px){
+
+.proof-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+@media(max-width:560px){
+
+.proof-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/*======================================================
+CONTACT
+======================================================*/
+
+#contact{
+
+    padding:100px 6% 120px;
+
+    background:#0D2137;
+
+}
+
+.contact-inner{
+
+    max-width:1100px;
+
+    margin:0 auto;
+
+}
+
+.contact-kicker{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:var(--gold-light);
+
+    font-family:'Space Mono';
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    font-size:.74rem;
+
+    margin-bottom:20px;
+
+}
+
+.contact-kicker::before{
+
+    content:"";
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--gold-light);
+
+}
+
+.contact-heading{
+
+    max-width:640px;
+
+    font-size:clamp(1.7rem,3vw,2.4rem);
+
+    line-height:1.3;
+
+    letter-spacing:-.02em;
+
+    color:var(--white);
+
+    margin-bottom:64px;
+
+}
+
+.contact-heading span{
+
+    color:var(--gold-light);
+
+}
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:start;
+
+}
+
+.contact-fields{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:26px;
+
+}
+
+.contact-field{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:22px 24px;
+
+    border:1px solid rgba(196,154,42,.22);
+
+    border-radius:12px;
+
+    background:rgba(245,240,232,.03);
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+.contact-field:hover{
+
+    border-color:var(--gold);
+
+    background:rgba(196,154,42,.06);
+
+    transform:translateY(-3px);
+
+}
+
+.contact-field .field-icon{
+
+    font-size:1.4rem;
+
+    flex-shrink:0;
+
+}
+
+.contact-field .field-label{
+
+    display:block;
+
+    font-family:'Space Mono';
+
+    letter-spacing:.1em;
+
+    text-transform:uppercase;
+
+    font-size:.66rem;
+
+    color:var(--gold-light);
+
+    margin-bottom:6px;
+
+}
+
+.contact-field .field-value{
+
+    font-size:1.05rem;
+
+    color:rgba(245,240,232,.9);
+
+}
+
+/*======================================================
+FONDATEUR
+======================================================*/
+
+#founder{
+
+    padding:90px 6%;
+
+    background:var(--white);
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.founder-inner{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.founder-photo{
+
+    width:140px;
+
+    height:140px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid var(--gold);
+
+    box-shadow:0 12px 30px rgba(13,33,55,.15);
+
+    margin-bottom:24px;
+
+}
+
+.founder-name{
+
+    font-size:1.3rem;
+
+    font-weight:600;
+
+    color:var(--navy);
+
+    letter-spacing:-.01em;
+
+    margin-bottom:8px;
+
+}
+
+.founder-title{
+
+    font-family:'Space Mono';
+
+    letter-spacing:.14em;
+
+    text-transform:uppercase;
+
+    font-size:.72rem;
+
+    color:var(--blue);
+
+}
+
+@media(max-width:900px){
+
+.contact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/*======================================================
 PLACEHOLDERS
 ======================================================*/
 
@@ -433,8 +1203,6 @@ FOOTER
 ======================================================*/
 
 footer{
-
-    margin-top:80px;
 
     padding:35px 6%;
 
@@ -531,9 +1299,9 @@ text-align:center;
 
     </div>
 
-    <a href="#cta" class="nav-cta">
+    <a href="https://wa.me/237697962412" class="nav-cta" target="_blank" rel="noopener">
 
-        DÉMARRER UN PROJET
+        CONSULTEZ-NOUS
 
     </a>
 
@@ -566,9 +1334,9 @@ text-align:center;
 
         <h1>
 
-            On ne fait pas des sites.<br>
+            Nous Batissons des Solutions <br>
 
-            On code des impacts.
+            qui IMPACTENT
 
         </h1>
 
@@ -584,13 +1352,7 @@ text-align:center;
 
         </p>
 
-        <a
-            href="#services"
-            class="btn-navy">
-
-            SCANNEZ L'AVENIR →
-
-        </a>
+        <p class="hero-quote" id="heroQuote"></p>
 
     </div>
 
@@ -601,68 +1363,50 @@ text-align:center;
 ============================ -->
 
 <section class="marquee">
+<div class="marquee-inner">
+    <span>SCANNEZ L'AVENIR</span>
+    <span>✦</span>
+    <span>INTELLIGENCE ARTIFICIELLE</span>
+    <span>✦</span>
+    <span>SOLUTIONS DIGITALES</span>
+    <span>✦</span>
+    <span>APPLICATIONS MOBILES</span>
+    <span>✦</span>
+    <span>SITES WEB</span>
+    <span>✦</span>
+    <span>PLATEFORMES SUR MESURE</span>
+    <span>✦</span>
+    <span>FORMATION & ÉDUCATION</span>
+    <span>✦</span>
+    <span>BRANDING & MARKETING</span>
+    <span>✦</span>
+    <span>AUDIT • FINANCE • COMPTABILITÉ</span>
+    <span>✦</span>
+    <span>CONSTRUISONS ENSEMBLE</span>
+    <span>✦</span>
 
-    <div class="marquee-inner">
-
-        <span>Sites Web</span>
-
-        <span>✦</span>
-
-        <span>Applications Mobiles</span>
-
-        <span>✦</span>
-
-        <span>Branding</span>
-
-        <span>✦</span>
-
-        <span>Marketing Digital</span>
-
-        <span>✦</span>
-
-        <span>Audit & Comptabilité</span>
-
-        <span>✦</span>
-
-        <span>Conseil Stratégique</span>
-
-        <span>✦</span>
-
-        <span>Sites Web</span>
-
-        <span>✦</span>
-
-        <span>Applications Mobiles</span>
-
-        <span>✦</span>
-
-        <span>Branding</span>
-
-        <span>✦</span>
-
-        <span>Marketing Digital</span>
-
-        <span>✦</span>
-
-        <span>Audit & Comptabilité</span>
-
-        <span>✦</span>
-
-        <span>Conseil Stratégique</span>
-
-    </div>
-
-</section>
-
-<!-- ===========================
-     SERVICES
-============================ -->
-
-<section
-    id="services"
-    class="placeholder">
-
-    [ STEP 4 — SERVICES ]
+    <!-- Duplication pour l'effet infini -->
+    <span>SCANNEZ L'AVENIR</span>
+    <span>✦</span>
+    <span>INTELLIGENCE ARTIFICIELLE</span>
+    <span>✦</span>
+    <span>SOLUTIONS DIGITALES</span>
+    <span>✦</span>
+    <span>APPLICATIONS MOBILES</span>
+    <span>✦</span>
+    <span>SITES WEB</span>
+    <span>✦</span>
+    <span>PLATEFORMES SUR MESURE</span>
+    <span>✦</span>
+    <span>FORMATION & ÉDUCATION</span>
+    <span>✦</span>
+    <span>BRANDING & MARKETING</span>
+    <span>✦</span>
+    <span>AUDIT • FINANCE • COMPTABILITÉ</span>
+    <span>✦</span>
+    <span>CONSTRUISONS ENSEMBLE</span>
+    <span>✦</span>
+</div>
 
 </section>
 
@@ -670,41 +1414,272 @@ text-align:center;
      MANIFESTO
 ============================ -->
 
-<section
-    id="manifesto"
-    class="placeholder dark">
+<section id="manifesto">
 
-    [ STEP 5 — MANIFESTO ]
+    <div class="manifesto-inner">
+
+        <div class="manifesto-kicker">Notre Manifeste</div>
+
+        <div class="manifesto-lead">
+
+            <p>Les plus grandes réussites commencent rarement par une technologie.</p>
+
+            <p>Elles commencent par une idée.</p>
+
+            <p class="dim">Une idée que beaucoup trouvent ambitieuse.<br>
+            Une idée que certains jugent impossible.</p>
+
+        </div>
+
+        <div class="manifesto-body">
+
+            <p>
+
+                Chez LuiTanA Group, nous avons choisi d'accompagner ces idées
+                jusqu'à leur réalisation. Nous concevons des solutions numériques
+                qui inspirent confiance, créent de la valeur et traversent le temps.
+                Pour nous, un projet réussi n'est pas seulement celui qui fonctionne
+                aujourd'hui, mais celui qui continue d'avoir un impact demain.
+
+            </p>
+
+            <p>
+
+                L'intelligence artificielle est au cœur de notre approche, non pas
+                pour remplacer l'humain, mais pour amplifier son potentiel, accélérer
+                les décisions et créer des solutions plus intelligentes.
+
+            </p>
+
+        </div>
+
+        <div class="manifesto-grid">
+
+            <div class="manifesto-item">
+
+                <span class="icon">💻</span>
+
+                <h3>Solutions digitales</h3>
+
+                <p>Sites web, applications mobiles, plateformes métiers et outils
+                sur mesure pensés pour accompagner votre croissance.</p>
+
+            </div>
+
+            <div class="manifesto-item">
+
+                <span class="icon">🤖</span>
+
+                <h3>Intelligence artificielle</h3>
+
+                <p>Automatisation, assistants intelligents, intégration de l'IA
+                dans vos processus et développement de solutions innovantes
+                adaptées à vos besoins.</p>
+
+            </div>
+
+            <div class="manifesto-item">
+
+                <span class="icon">🎨</span>
+
+                <h3>Branding & Marketing</h3>
+
+                <p>Identité visuelle, stratégie digitale, création de contenu
+                et communication pour faire rayonner votre marque.</p>
+
+            </div>
+
+            <div class="manifesto-item">
+
+                <span class="icon">📚</span>
+
+                <h3>Formation & Éducation</h3>
+
+                <p>Programmes de formation, accompagnement des équipes et
+                solutions éducatives pour développer les compétences de demain.</p>
+
+            </div>
+
+            <div class="manifesto-item full">
+
+                <span class="icon">📊</span>
+
+                <h3>Finance, Audit & Comptabilité</h3>
+
+                <p>Conseil, organisation financière, audit, outils de pilotage
+                et solutions de gestion pour sécuriser vos décisions.</p>
+
+            </div>
+
+        </div>
+
+        <div class="manifesto-closing">
+
+            <h3>Construisons <span>ensemble.</span></h3>
+
+            <p>
+
+                Parce que les meilleures idées méritent plus qu'une simple exécution.
+                Elles méritent une vision, une stratégie et des solutions capables
+                de transformer durablement votre avenir.
+
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
 <!-- ===========================
-     PROCESS
+     PREUVE SOCIALE
 ============================ -->
 
-<section
-    id="process"
-    class="placeholder">
+<section id="proof">
 
-    [ STEP 6 — PROCESS & TÉMOIGNAGES ]
+    <div class="proof-inner">
+
+        <div class="proof-kicker">Pourquoi LuiTanA Group</div>
+
+        <h2 class="proof-heading">
+
+            Une expertise <span>concrète</span>, au service
+            de résultats qui durent.
+
+        </h2>
+
+        <div class="proof-grid">
+
+            <div class="proof-item">
+
+                <div class="proof-stat">5+</div>
+
+                <p>Années d'expertise en <strong>analyse de données</strong>,
+                innovation et solutions intelligentes.</p>
+
+            </div>
+
+            <div class="proof-item">
+
+                <div class="proof-stat">10+</div>
+
+                <p>Solutions numériques conçues et développées, dont
+                <strong>NotiMo</strong>, notre assistant de gestion financière.</p>
+
+                <a href="NoTiMo.apk" download class="apk-download">
+
+                    📲 Télécharger NotiMo (APK)
+
+                </a>
+
+            </div>
+
+            <div class="proof-item">
+
+                <span class="proof-icon">🤖</span>
+
+                <p><strong>L'intelligence artificielle</strong> au cœur de
+                chacune de nos solutions pour accélérer l'innovation et
+                la prise de décision.</p>
+
+            </div>
+
+            <div class="proof-item">
+
+                <span class="proof-icon">🧭</span>
+
+                <p>Un <strong>accompagnement stratégique</strong> sur mesure en
+                transformation digitale, IA, branding, finance et
+                développement de solutions numériques.</p>
+
+            </div>
+
+        </div>
+
+        <p class="apk-note">
+
+            L'application n'étant pas encore réactivée sur le Play Store,
+            autorisez l'installation depuis une source inconnue lors du téléchargement.
+
+        </p>
+
+    </div>
 
 </section>
 
 <!-- ===========================
-     CTA
+     FONDATEUR
 ============================ -->
 
-<section
-    id="cta"
-    class="placeholder dark">
+<section id="founder">
 
-    [ STEP 7 — FORMULAIRE DE CONTACT ]
+    <div class="founder-inner">
+
+        <img src="photo%20CEO.jpg" alt="NTEJIO Roemar Dufond, CEO de LuiTanA Group" class="founder-photo">
+
+        <div class="founder-name">NTEJIO Roemar Dufond</div>
+
+        <div class="founder-title">CEO, LuiTanA Group</div>
+
+    </div>
 
 </section>
 
 <!-- ===========================
-     FOOTER
+     CONTACT
 ============================ -->
+
+<section id="contact">
+
+    <div class="contact-inner">
+
+        <div class="contact-kicker">Contact</div>
+
+        <h2 class="contact-heading">
+
+            Une idée en tête ? <span>Parlons-en.</span>
+
+        </h2>
+
+        <div class="contact-grid">
+
+            <div class="contact-fields">
+
+                <a href="mailto:luitanagroup@gmail.com" class="contact-field">
+
+                    <span class="field-icon">✉️</span>
+
+                    <span>
+
+                        <span class="field-label">Email</span>
+
+                        <span class="field-value">luitanagroup@gmail.com</span>
+
+                    </span>
+
+                </a>
+
+                <a href="https://wa.me/237697962412" target="_blank" rel="noopener" class="contact-field">
+
+                    <span class="field-icon">📞</span>
+
+                    <span>
+
+                        <span class="field-label">Téléphone</span>
+
+                        <span class="field-value">(+237) 697 962 412</span>
+
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 <footer>
 
@@ -742,17 +1717,41 @@ logo.addEventListener("mouseleave",()=>{
 
 });
 
-document.querySelector(".btn-navy").addEventListener("mouseenter",function(){
+const philoQuotes = [
 
-    this.innerHTML="SCANNONS L'AVENIR →";
+    { text:"Connais-toi toi-même.", author:"Socrate" },
+    { text:"La vie sans examen ne vaut pas la peine d'être vécue.", author:"Socrate" },
+    { text:"Nous sommes ce que nous répétons chaque jour. L'excellence n'est donc pas un acte, mais une habitude.", author:"Aristote" },
+    { text:"Le doute est le commencement de la sagesse.", author:"Aristote" },
+    { text:"Ce n'est pas parce que les choses sont difficiles que nous n'osons pas, c'est parce que nous n'osons pas qu'elles sont difficiles.", author:"Sénèque" },
+    { text:"La patience est amère, mais son fruit est doux.", author:"Jean-Jacques Rousseau" },
+    { text:"L'homme est né libre, et partout il est dans les fers.", author:"Jean-Jacques Rousseau" },
+    { text:"L'homme est condamné à être libre.", author:"Jean-Paul Sartre" },
+    { text:"Il n'y a qu'un problème philosophique vraiment sérieux : c'est le suicide.", author:"Albert Camus" },
+    { text:"Je pense, donc je suis.", author:"René Descartes" },
+    { text:"L'homme n'est qu'un roseau, le plus faible de la nature, mais c'est un roseau pensant.", author:"Blaise Pascal" },
+    { text:"Ose savoir.", author:"Emmanuel Kant" },
+    { text:"Ce qui ne me tue pas me rend plus fort.", author:"Friedrich Nietzsche" },
+    { text:"Deviens ce que tu es.", author:"Friedrich Nietzsche" },
+    { text:"On ne se baigne jamais deux fois dans le même fleuve.", author:"Héraclite" },
+    { text:"Le sage voit dans son cœur la lumière, l'insensé cherche cette lumière hors de lui.", author:"Confucius" },
+    { text:"Le chemin de mille lieues commence toujours par un premier pas.", author:"Lao Tseu" },
+    { text:"Ne cherche pas à ce que les choses arrivent comme tu le désires, mais désire qu'elles arrivent comme elles arrivent.", author:"Épictète" },
+    { text:"Nulle part on ne peut trouver de retraite plus calme et plus tranquille que dans sa propre âme.", author:"Marc Aurèle" },
+    { text:"Le courage, c'est de savoir ce qu'il ne faut pas craindre.", author:"Platon" },
+    { text:"La victoire appartient au plus opiniâtre.", author:"Napoléon Bonaparte" },
 
-});
+];
 
-document.querySelector(".btn-navy").addEventListener("mouseleave",function(){
+const heroQuoteEl = document.getElementById("heroQuote");
 
-    this.innerHTML="SCANNEZ L'AVENIR →";
+if(heroQuoteEl){
 
-});
+    const pick = philoQuotes[Math.floor(Math.random()*philoQuotes.length)];
+
+    heroQuoteEl.innerHTML = `"${pick.text}" <span class="quote-author">— ${pick.author}</span>`;
+
+}
 
 </script>
 
